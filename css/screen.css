@@ -1,1 +1,20 @@
-body {}
+body { margin: 0; }
+
+a {	color: red; text-decoration: none; font-size: 0.7em;}
+a:hover { color: #999;}
+
+input { width: 70%; padding: 3px; font-size: 1.2em; -webkit-border-radius: 5px;
+	 border: 1px solid #999; -webkit-box-shadow: 1px 1px 3px #ccc;}
+input[type=submit] { width: 15%; background: #ccc; }
+
+#container {
+	width: 400px; position: relative; left: 50%; margin-left: -200px;
+	background: #eee; border: 1px solid #ccc; -webkit-border-radius: 0 0 10px 10px;
+	-webkit-box-shadow: 1px 1px 20px #ccc; }
+
+form.note { padding: 20px; background: #fff; border-bottom: 1px solid #ccc; }
+
+.notes { margin: 0; padding: 20px; border-top: 1px solid #fff;}
+.notes li { margin-bottom: 5px; padding: 3px 6px; font-size: 1.2em; list-style-type: none; -webkit-border-radius: 5px; -webkit-box-shadow: 1px 1px 5px #ddd; }
+.notes li:hover { background: #fff; cursor: text; }
+.notes li a { float: right; padding-top: 3px; }

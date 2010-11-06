@@ -11,11 +11,12 @@
 </head>
 <body>
   <div id="container">
-	<form action="#!/notes" method="post">
-		<input name="text" value=""/>
+	<form action="#!/notes" method="post" class='note'>
+		<input type="hidden" name="id" value="" />
+		<input type="text" name="text" value=""/>
 		<input type="submit" value="Add"/>
 	</form>
-	<ul id="list">
+	<ul id="notes" class="notes">
 	</ul>
   </div>
   <script src="js/default.js" type="text/javascript" charset="utf-8"></script>
