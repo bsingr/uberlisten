@@ -9063,15 +9063,15 @@ window.jQuery = window.$ = jQuery;
 	Note = app.createModel("note");
 	
 	var reloadList = function(){
-	  jQuery("#list").html("<li>Loading...</li>");
+	  jQuery("#notes").html("<li>Loading...</li>");
 	  var ulHtml = "";
 	  Note.all(function(notes){
 		$.each(notes.rows, function(i,row){
 		  if (row.doc.type == "note") {
-			ulHtml += "<li><a href='#!/notes/"+row.id+"/delete' data-id='"+row.id+"' data-rev='"+row.doc._rev+"'>"+row.doc.text+"</a></li>";
+			ulHtml += "<li>"+row.doc.text+" <a href='#!/notes/"+row.id+"/delete' data-id='"+row.id+"' data-rev='"+row.doc._rev+"'>(delete)</a></li>";
 		  }
 		});
-		jQuery("#list").html(ulHtml);
+		jQuery("#notes").html(ulHtml);
 	  });
 	};
 
@@ -9082,6 +9082,9 @@ window.jQuery = window.$ = jQuery;
     app.post("#!/notes", function(){
 	  var con = this;
 	  var text = this.params["text"];
+	  var isValid = (text != "");
+	  if (!isValid) { jQuery("[name=text]").css("background","#ffcccc"); return false; }
+	  else { jQuery("[name=text]").css("background","white").val(""); }
 	  Note.create({
 		"text": text
 	  },function(c){
