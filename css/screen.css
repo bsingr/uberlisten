@@ -14,7 +14,7 @@ input[type=submit] { width: 15%; background: #ccc; }
 
 form.note { padding: 20px; background: #fff; border-bottom: 1px solid #ccc; }
 
-.notes { margin: 0; padding: 20px; border-top: 1px solid #fff;}
+.notes { margin: 0; padding: 20px; }
 .notes li { margin-bottom: 5px; padding: 3px 6px; font-size: 1.2em; list-style-type: none; -webkit-border-radius: 5px; -webkit-box-shadow: 1px 1px 5px #ddd; }
 .notes li:hover { background: #fff; cursor: text; }
 .notes li a { float: right; padding-top: 3px; }
